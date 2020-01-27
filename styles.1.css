@@ -1,0 +1,136 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: verdana;
+	font-size: 13px;
+	color: silver;
+}
+
+body {
+	background-color: black;
+}
+
+a {
+	text-decoration: none;
+	color: green;
+}
+
+h2 {
+	margin: 0;
+}
+
+#wrapper {
+	width: 400px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	overflow: hidden;
+}
+
+.segment {
+	width: 150px;
+	height: 150px;
+	margin: 25px;
+	float: left;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+
+.segment a {
+	display: block;
+	height: 100%;
+}
+
+.segment:hover {
+	z-index: -1;
+	zoom: 1;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+
+#instances {
+	background-color: #021B43;
+	background-image: url("/imgs/layout/inst.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-radius: 100% 0 0 0;
+}
+
+#commanders {
+	background-color: #021B43;
+	background-image: url("/imgs/layout/cc.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-radius: 0 100% 0 0;
+}
+
+#designer {
+	background-color: #021B43;
+	background-image: url("/imgs/layout/des.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-radius: 0 0 0 100%;
+}
+
+#maxcalc {
+	background-color: #021B43;
+	background-image: url("/imgs/layout/max.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-radius: 0 0 100% 0;
+}
+
+#logo {
+	position: absolute;
+	z-index: 1;
+	width: 200px;
+	height: 200px;
+	top: 100px;
+	left: 100px;
+	background-color: black;
+	border-radius: 85px;
+	background-image: url("/imgs/layout/Corps57.png");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+#news {
+	position: absolute;
+	width: 200px;
+	height: 280px;
+	border-style: solid;
+	border-width: 1px 1px 1px 0;
+	border-color: #444;
+	border-radius: 0 10px 10px 0;
+	background-color: #050505;
+	top: 50%;
+	transform: translateY(-50%);
+	overflow: hidden;
+}
+
+/*
+     FILE ARCHIVED ON 15:15:26 Jul 15, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:51:02 Jul 26, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 279.462 (3)
+  esindex: 0.013
+  captures_list: 303.828
+  CDXLines.iter: 15.431 (3)
+  PetaboxLoader3.datanode: 262.501 (5)
+  exclusion.robots: 0.267
+  exclusion.robots.policy: 0.249
+  RedisCDXSource: 4.03
+  PetaboxLoader3.resolve: 363.404 (4)
+  load_resource: 996.421
+*/

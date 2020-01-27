@@ -1,0 +1,224 @@
+body {
+
+	margin: 5px;
+
+}
+
+
+
+body, select, input {
+
+	background-color: black;
+
+}
+
+
+
+body, table, input, select {
+
+	font-family: verdana;
+
+	font-size: 11px;
+
+	color: white;
+
+}
+
+
+
+button {
+
+	border: solid 1px silver;
+
+	background-color: white;
+
+	border-radius: 4px;
+
+}
+
+
+
+input, select {
+
+	width: 100px;
+
+}
+
+
+
+#items {
+
+	clear: both;
+
+}
+
+
+
+.item {
+
+	border: solid 1px silver;
+
+	float: left;
+
+	width: 230px;
+
+	line-height: 22px;
+
+	margin-right: 5px;
+
+	margin-bottom: 5px;
+
+	border-radius: 8px;
+
+	padding: 5px;
+
+}
+
+
+
+.item input, .item select {
+
+	background-color: black;
+
+	border: solid 1px silver;
+
+}
+
+
+
+.item .field {
+
+	clear: right;
+
+	overflow: auto;
+
+}
+
+
+
+.item .field input, .item .field select {
+
+	float: right;
+
+	clear: right;
+
+}
+
+
+
+.item .field .disabled {
+
+	border-style: none;
+
+}
+
+
+
+#addItem, #addTotal {
+
+	float: left;
+
+	clear: both;
+
+}
+
+
+
+#totals {
+
+	clear: both;
+
+}
+
+
+
+#totals .itemButton {
+
+	border: solid 1px silver;
+
+	background-color: white;
+
+	border-radius: 4px;
+
+}
+
+
+
+#totals .itemButton.selected {
+
+	background-color: red;
+
+}
+
+
+
+.total .attack {
+
+	line-height: 22px;
+
+	border-style: none;
+
+}
+
+
+
+.total .close {
+
+	cursor: pointer;
+
+}
+
+
+
+.total .close:hover {
+
+	color: orange;
+
+}
+
+
+
+.item {
+
+	position: relative;
+
+}
+
+
+
+.item .close {
+
+	position: absolute;
+
+	right: 0;
+
+	top: 0;
+
+	line-height: 5px;
+
+	cursor: pointer;
+
+}
+
+
+
+.item .close:hover {
+
+	color: orange;
+
+}
+
+.swapstacker {
+	color: red;
+	cursor: pointer;
+}
+
+.swapstacker:hover {
+	color: green;
+}
+
+.field.hidden {
+	display: none;
+}
+
+

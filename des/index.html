@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html>
+		<title>Ship Designer - Galaxy Online 2</title>
+		<link rel="stylesheet" type="text/css" href="/des/styles.15.css"/>
+		<script type="text/javascript" src="/res/defines.37.js"></script>
+		<script type="text/javascript" src="/res/chip.1.js"></script>
+		<script type="text/javascript" src="/res/hulls.32.js"></script>
+		<script type="text/javascript" src="/res/parts.27.js"></script>
+		<script type="text/javascript" src="/res/lists.37.js"></script>
+		<script type="text/javascript" src="/lib/html5slider.1.js"></script>
+		<script type="text/javascript" src="/des/application.40.js"></script>
+	</head>
+	<body>
+		<div id="links">
+			<a href="http://go2.forum.igg.com/topic?fcid=91&amp;ctid=186136" target="_blank">Feedback</a>
+			<a href="/inst/">Instances</a>
+			<a href="/cc/">Commanders</a>
+		</div>
+		<div id="message">
+			<noscript>Javascript must be enabled</noscript>
+			<script type="text/javascript">
+				document.write('Loading');
+			</script>
+		</div>
+		<div id="moduleInspector"><div class="contents"></div></div>
+		<div id="hullInspector"><div class="contents"></div></div>
+		<div id="wrapper">
+			
+			<div id="designListWrapper">
+				<div id="closeList"></div>
+				<div id="designList"></div>
+			</div>
+			
+			<div id="chipSelector" class="hidden">
+				<div id="chipType"></div>
+				<div id="chipColor">
+					<div id="chipColorGreen"></div>
+					<div id="chipColorBlue"></div>
+					<div id="chipColorPurple"></div>
+					<div id="chipColorOrange"></div>
+				</div>
+				<div id="chipLevel"></div>
+			</div>
+			<div id="hullCategorySelector">
+				<ul>
+					<li id="hullCategory0" class="frigate"><img src="/imgs/layout/hulltype-frigate.png"/></li>
+					<li id="hullCategory1" class="cruiser"><img src="/imgs/layout/hulltype-cruiser.png"/></li>
+					<li id="hullCategory2" class="battleship"><img src="/imgs/layout/hulltype-battleship.png"/></li>
+					<li id="hullCategory4" class="flagship"><img src="/imgs/layout/hulltype-flagship.png"/></li>
+					<li id="hullCategory3" class="special"><img src="/imgs/layout/hulltype-special.png"/></li>
+				</ul>
+			</div>
+			<div id="hullSelector">
+				<ul></ul>
+			</div>
+			<div id="hullPager">
+				<div class="go previous"></div>
+				<div class="go next"></div>
+				<div class="number">1</div>
+			</div>
+			<div id="moduleTypeSelector">
+				<ul>
+					<li class="attack"></li>
+					<li class="defense"></li>
+					<li class="auxiliary"></li>
+				</ul>
+			</div>
+			<div id="moduleCategorySelector">
+				<ul class="attack">
+					<li class="ballistic"></li>
+					<li class="directional"></li>
+					<li class="missle"></li>
+					<li class="shipbased"></li>
+					<li class="planetary"></li>
+				</ul>
+				<ul class="defense">
+					<li class="structure"></li>
+					<li class="shield"></li>
+					<li class="airdefense"></li>
+				</ul>
+				<ul class="auxiliary">
+					<li class="electronic"></li>
+					<li class="storage"></li>
+					<li class="transmission"></li>
+				</ul>
+			</div>
+			<div id="moduleSelector">
+				<ul></ul>
+			</div>
+			<div id="modulePager">
+				<div class="go previous"></div>
+				<div class="go next"></div>
+				<div class="number">1</div>
+			</div>
+			<div id="designSaver"><span id="saveDesign">Save Design</span> | <span id="linker">Link Design</span><!--<span id="showDesigns">Show Designs</span>--></div>
+			<div id="shipDesign">
+				<div id="names"><span id="hullName"></span><span id="designName"> (<span></span>)</span></div>
+				<div id="selectedModules"></div>
+				<div id="deselectedModulesWrapper">
+					<div id="hideDeselected">Hide</div>
+					<p>Deselected Modules:</p>
+					<div id="deselectedModules"></div>
+				</div>
+				<div id="volume">
+					<progress id="volumeBar" value="0" max="0"></progress>
+					<div id="volumePrecision">
+						<span id="volumeCounter">0&#47;0</span>
+						[<span id="volumeRemaining"></span>]
+					</div>
+				</div>
+			</div>
+			<div id="designStats">
+				<div class="field" id="attack">
+					<div class="name">Attack:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="shield">
+					<div class="name">Shield:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="attackPerRound">
+					<div class="name">Atk/Rnd:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="structure">
+					<div class="name">Structure:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="steering">
+					<div class="name">Steering:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="agility">
+					<div class="name">Agility:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="storage">
+					<div class="name">Storage:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="stability">
+					<div class="name">Stability:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="mobility">
+					<div class="name">Mobility:</div>
+					<div class="value"></div>
+				</div>
+				<div class="field" id="defense">
+					<div class="name">Defense:</div>
+					<div class="value">
+						<span class="defenseValue"></span> 
+						<span title="Damage Reduction Percentage">(<span class="defensePercentage"></span>%)</span>
+					</div>
+				</div>
+			</div>
+			<div id="designCost">
+				<div class="field" id="metal"></div>
+				<div class="field" id="he3"></div>
+				<div class="field" id="gold"></div>
+			</div>
+			<div id="options">
+				<div class="option">
+					Stack:
+					<div>
+						<input type="range" id="stack" class="range" min="1" max="3000" step="1" value="1"/>
+						<input type="text" id="stackNumber" class="number" value="1"/>
+					</div>
+				</div>
+				<div class="option">
+					Effective Stack:
+					<div>
+						<input type="range" id="effectiveStack" class="range" min="1100" max="3000" step="1" value="1100"/>
+						<input type="text" id="effectiveStackNumber" class="number" value="1100"/>
+					</div>
+				</div>
+				<div class="option"><label for="applyTech">Tech: </label><input type="checkbox" id="applyTech" checked="checked"/></div>
+				<div class="option"><label for="volumeLimit">Volume Limit: </label><input type="checkbox" id="volumeLimit" checked="checked"/></div>
+				<div class="option"><label for="showAllHulls">Show All Hulls: </label><input type="checkbox" id="showAllHulls"/></div>
+			</div>
+			<div id="quick">
+				<button id="quickSteering">Steering</button>
+				<button id="quickAgility">Agility</button>
+				<button id="quickShield">Shield</button>
+				<button id="quickStructure">Structure</button>
+				<button id="quickControl">Control</button>
+			</div>
+			<div id="designerror"></div>
+			<div id="shieldnegation">
+				<h3>Shield Negation</h3>
+				<div class="field">
+					<div class="name">Kinetic:</div>
+					<div class="value" id="negatekinetic"></div>
+				</div>
+				<div class="field">
+					<div class="name">Heat:</div>
+					<div class="value" id="negateheat"></div>
+				</div>
+				<div class="field">
+					<div class="name">Magnetic:</div>
+					<div class="value" id="negatemagnetic"></div>
+				</div>
+				<div class="field">
+					<div class="name">Explosive:</div>
+					<div class="value" id="negateexplosive"></div>
+				</div>
+				<div class="option">
+					<div class="name">Flagship:</div>
+					<div class="value">
+						<select id="flagship"><option value="0"></option></select>
+					</div>
+				</div>
+			</div>
+			<div id="hullnegation">
+				<h3>Structure Negation</h3>
+				<div class="field">
+					<div class="name">Kinetic:</div>
+					<div class="value" id="snegatekinetic"></div>
+				</div>
+				<div class="field">
+					<div class="name">Heat:</div>
+					<div class="value" id="snegateheat"></div>
+				</div>
+				<div class="field">
+					<div class="name">Magnetic:</div>
+					<div class="value" id="snegatemagnetic"></div>
+				</div>
+				<div class="field">
+					<div class="name">Explosive:</div>
+					<div class="value" id="snegateexplosive"></div>
+				</div>
+			</div>
+			<div id="chips">
+				<div id="chip0" class="chip"></div>
+				<div id="chip1" class="chip"></div>
+				<div id="chip2" class="chip"></div>
+				<div id="chip3" class="chip"></div>
+				<div id="chip4" class="chip"></div>
+			</div>
+		</div>
+		<div id="powered">Powered by KR&yen;P&dagger;&reg;N&trade;</div>
+		<!--
+		<script type="text/javascript" src="http://s10.histats.com/js15.js"></script>
+		<script type="text/javascript">
+			try {
+				Histats.start(1, 1497044, 4, 0, 0, 0, '');
+				Histats.track_hits();
+			}
+			catch(err){};
+		</script>
+		-->
+	</body>
+</html>

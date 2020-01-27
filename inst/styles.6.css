@@ -1,0 +1,765 @@
+/* generic */
+
+
+
+	body, table, input, select, textarea {
+
+		font-family: verdana;
+
+		font-size: 11px;
+
+	}
+
+
+
+	body, table {
+
+		color: white;
+
+	}
+
+
+
+	html, body {
+
+		height: 100%;
+
+		padding: 0;
+
+		margin: 0;
+
+	}
+
+
+
+	body {
+
+		background-color: black;
+
+		background: url(/imgs/layout/background.jpg);
+
+		background-size: 100% 100%;
+
+		background-repeat: no-repeat;
+
+		background-attachment: fixed;
+
+	}
+
+
+
+/* no javascript / loading message */
+
+
+
+	#message {
+
+		margin-top: 50px;
+
+		text-align: center;
+
+		font-size: 22px;
+
+	}
+
+
+
+	#message span {
+
+		background-color: #444;
+
+		padding: 20px 40px;
+
+		border-radius: 20px;
+
+		opacity: 0.5;
+
+	}
+
+
+
+/* mode selector */
+
+
+
+	#modeSelector {
+
+		position: absolute;
+
+		top: 0;
+
+		left: 0;
+
+		margin: 10px;
+
+		z-index: 2;
+
+	}
+
+	
+
+/* map selector */
+
+
+
+	#mapSelector {
+
+		position: fixed;
+
+		top: 0;
+
+		left: 0;
+
+		margin: 10px;
+
+		z-index: 2;
+
+		overflow: hidden;
+
+	}
+
+	
+
+	#mapSelector div {
+
+		height: 36px;
+
+		overflow: hidden;
+
+	}
+
+	
+
+	#mapSelector img {
+
+		vertical-align: middle;
+
+	}
+
+	
+
+	#mapList {
+
+		margin: 8px 0;
+
+	}
+
+
+
+/* map */
+
+
+
+	#map {
+
+		position: relative;
+
+		width: 1420px;
+
+		height: 890px;
+
+		margin: 0 auto;
+
+		font-weight: bold;
+
+		font-size: 9px;
+
+		background-image: url(/imgs/layout/grid.png);
+
+	}
+
+	
+
+	#map img, #map div {
+
+		display: none;
+
+		position: absolute;
+
+		z-index: 2;
+
+	}
+
+	
+
+	#map div {
+
+		background-color: #000;
+
+		border-radius: 5px;
+
+	}
+
+	
+
+/* reward list */
+
+
+
+	#rewards {
+
+		list-style: none;
+
+		margin: 10px;
+
+		padding: 0;
+
+	}
+
+
+
+	#rewards li {
+
+		margin-top: 10px;
+
+		height: 40px;
+
+		line-height: 40px;
+
+	}
+
+
+
+	#rewards img {
+
+		vertical-align: middle;
+
+		padding-right: 10px;
+
+	}
+
+	
+
+/* inspector */
+
+
+
+	#inspector {
+
+		background-color: black;
+
+		z-index: 4;
+
+		width: 720px;
+
+		height: 245px;
+
+		border: solid 1px silver;
+
+		border-radius: 20px;
+
+		padding: 5px;
+
+		display: none;
+
+		position: absolute;
+
+	}
+
+	
+
+	#inspector #closeInspector {
+
+		position: absolute;
+
+		top: 10px;
+
+		right: 10px;
+
+		width: 60px;
+
+		display: none;
+
+		z-index: 6;
+
+	}
+
+	
+
+	#inspector #formation {
+
+		float: right;
+
+		overflow: hidden;
+
+		width: 375px;
+
+		height: 245px;
+
+		position: relative;
+
+	}
+
+	
+
+	#inspector #formation .stack {
+
+		position: absolute;
+
+		width: 80px;
+
+		height: 62px;
+
+		z-index: 7;
+
+	}
+
+	
+
+	#inspector #formation div {
+
+		position: absolute;
+
+		font-weight: bold;
+
+	}
+
+
+
+	#inspector #commander {
+
+		position: absolute;
+
+		left: 280px;
+
+		top: 5px;
+
+		padding: 12px;
+
+		z-index: 6;
+
+	}
+
+	
+
+	#inspector #commander #commanderStars {
+
+		float: right;
+
+		padding: 0 10px;
+
+	}
+
+	
+
+	#inspector #formation .stack:hover, 
+
+	#inspector #commander:hover, 
+
+	#inspector #formation .stack.selected, 
+
+	#inspector #commander.selected
+
+	{
+
+		background-color: #111;
+
+		border-radius: 20px;
+
+		z-index: 8;
+
+	}
+
+	
+
+	#inspector td {
+
+		font-size: 9px;
+
+		line-height: 14px;
+
+		vertical-align: top;
+
+	}
+
+	
+
+	#inspector.player td {
+
+		line-height: 20px;
+
+	}
+
+	
+
+	#inspector table {
+
+		width: 340px;
+
+	}
+
+	
+
+	#inspector #defenseParts {
+
+		overflow: auto;
+
+	}
+
+	
+
+	#inspector #defenseParts div, #inspector #weaponParts div {
+
+		float: left;
+
+		width: 21px;
+
+		height: 21px;
+
+		margin-right: 5px;
+
+		margin-bottom: 5px;
+
+		color: yellow;
+
+		font-weight: bold;
+
+		padding: 2px;
+
+		text-shadow: 0 0 2px black;
+
+		font-size: 11px;
+
+		background-size: 25px 25px;
+
+	}
+
+	
+
+	#inspector #defenseParts div:hover, #inspector #weaponParts div:hover {
+
+		border: solid 1px red;
+
+		padding: 1px;
+
+		background-position: -1px -1px;
+
+	}
+
+	
+
+/* fleet editor */
+
+
+
+	#fleetEditor {
+
+		width: 600px;
+
+		margin: 0 auto;
+
+		padding-top: 10px;
+
+	}
+
+	
+
+	#fleetEditor #newFleet {
+
+		margin-bottom: 10px;
+
+	}
+
+	
+
+	#fleetEditor table {
+
+		border-collapse: collapse;
+
+		border: solid 1px silver;
+
+		border-width: 0 1px 1px 0;
+
+		width: 100%;
+
+	}
+
+
+
+	#fleetEditor td, #fleetEditor th {
+
+		border: solid 1px silver;
+
+		border-width: 1px 0 0 1px;
+
+	}
+
+	
+
+/* reward list */
+
+
+
+	#rewardList {
+
+		position: fixed;
+
+		top: 80px;
+
+		left: 10px;
+
+		background-color: black;
+
+		border: solid 1px silver;
+
+		z-index: 4;
+
+		overflow-y: auto;
+
+		max-height: 80%;
+
+		border-radius: 8px;
+
+	}
+
+	
+
+	#rewardList.expanded {
+
+		min-width: 300px;
+
+		border-radius: 8px 0 0 8px;
+
+	}
+
+	
+
+	#rewardList ul {
+
+		list-style: none;
+
+		margin: 0;
+
+		padding: 0;
+
+	}
+
+	
+
+	#rewardList #rewardListClose, #rewardList #rewardListShow {
+
+		float: right;
+
+		padding: 8px;
+
+	}
+
+	
+
+	#rewardList #rewardListClose:hover, #rewardList #rewardListShow:hover {
+
+		color: orange;
+
+		cursor: pointer;
+
+	}
+
+	
+
+	#rewardList li {
+
+		margin: 10px;
+
+	}
+
+	
+
+	#rewardList img {
+
+		margin-right: 10px;
+
+		vertical-align: middle;
+
+		width: 40px;
+
+		height: 40px;
+
+	}
+
+	
+
+	#rewardList.expanded #rewardListShow, #rewardList.collapsed ul, #rewardList.collapsed #rewardListClose {
+
+		display: none;
+
+	}
+
+
+
+/* contact */
+
+
+
+	#links {
+
+		position: fixed;
+
+		top: 10px;
+
+		right: 10px;
+
+		z-index: 4;
+
+	}
+
+	
+
+	#links a {
+
+		float: left;
+
+		color: white;
+
+		font-weight: bold;
+
+		text-decoration: none;
+
+		padding: 6px;
+
+		border: solid 1px silver;
+
+		border-radius: 7px;
+
+		margin-left: 10px;
+
+		background-color: black;
+
+	}
+
+
+
+	#links a:hover {
+
+		color: orange;
+
+	}
+
+	
+
+/* console */
+
+	
+
+	#console {
+
+		z-index: 100;
+
+		height: 180px;
+
+		width: 100%;
+
+		position: fixed;
+
+		left: 0;
+
+		bottom: 0;
+
+		background-color: black;
+
+		padding: 10px;
+
+		display: none;
+
+	}
+
+	
+
+	#closeConsole {
+
+		position: absolute;
+
+		right: 30px;
+
+		top: 10px;
+
+	}
+
+
+
+/* powered by */
+
+
+
+	#powered {
+
+		position: fixed;
+
+		bottom: 0;
+
+		right: 0;
+
+		padding: 5px;
+
+	}
+
+	
+
+/* layer manager */
+
+	
+
+	#loading #message,
+
+	/*#loading #modeSelector, #loading #mapSelector, #loading #fleetEditor, #loading #map, #loading #rewardList,*/
+
+	
+
+	#instances #fleetEditor, #instances #message, #instances #modeSelector #modeInstances,
+
+	#fleetEditor #mapSelector, #fleetEditor #map, #fleetEditor #rewardList, #fleetEditor #message, #fleetEditor #modeSelector #modefleetEditor,
+
+	#inspector.enemy #playerFleetName, #inspector.enemy #targetSelector, #inspector.enemy #rangeSelector, #inspector.enemy #turnButton, #inspector.enemy #structureDetails, #inspector.enemy #playerFleet, #inspector.enemy #commanderSelector, #inspector.enemy #fleetSelector,
+
+	#inspector.structure #fleetDetails, #inspector.structure #commander,
+
+	#inspector.stack #fleetDetails, #inspector.stack #commanderDetails,
+
+	
+
+	#inspector.enemy #hullSelector,
+
+	#inspector.enemy #playerShipName,
+
+	
+
+	#inspector.fleet #stackDetails, #inspector.fleet #commanderDetails,
+
+	#inspector.commander #stackDetails, #inspector.commander #fleetDetails,
+
+	
+
+	#inspector.player #structureDetails,
+
+	#inspector.player #hullName,
+
+	#inspector.player #shipName,
+
+	#inspector.player #enemyShield,
+
+	#inspector.player #enemyStructure,
+
+	#inspector.player #enemyWeapons,
+
+	#inspector.player #enemyDamage,
+
+	#inspector.player #enemyCounteracts,
+
+	#inspector.player #commanderName,
+
+	
+
+	
+
+	#inspector.player #fleetName, 
+
+	#inspector.player #target, 
+
+	#inspector.player #range
+
+	
+
+	{
+
+		display: none;
+
+	}

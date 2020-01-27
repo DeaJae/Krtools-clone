@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+		<title>Commander Planner - Galaxy Online 2</title>
+		<link rel="stylesheet" type="text/css" href="/cc/static.4.css"/>
+		<link rel="stylesheet" type="text/css" href="/cc/styles.10.css"/>
+		<script type="text/javascript" src="/res/defines.37.js"></script>
+		<script type="text/javascript" src="/res/gems.2.js"></script>
+		<script type="text/javascript" src="/res/commanders.27.js"></script>
+		<script type="text/javascript" src="/res/chip.1.js"></script>
+		<script type="text/javascript" src="/cc/other.1.js"></script>
+		<script type="text/javascript" src="/cc/application.18.js"></script>
+	</head>
+	<body>
+		<div id="outerWrapper">
+			<div id="links">
+				<a href="http://go2.forum.igg.com/topic?fcid=91&amp;ctid=186136" target="_blank">Feedback</a>
+				<a href="/inst/">Instances</a>
+				<a href="/des/">Designer</a>
+			</div>
+			<div id="innerWrapper">
+			
+				
+				<div id="commanderListWrapper">
+					<div id="closeList"></div>
+					<div id="commanderList"></div>
+				</div>
+			
+			
+			
+			
+				<div id="chipSelector" class="hidden">
+					<div id="chipType"></div>
+					<div id="chipColor">
+						<div id="chipColorGreen"></div>
+						<div id="chipColorBlue"></div>
+						<div id="chipColorPurple"></div>
+						<div id="chipColorOrange"></div>
+					</div>
+					<div id="chipLevel"></div>
+				</div>
+				<div id="chips">
+					<div id="chip0" class="chip"></div>
+					<div id="chip1" class="chip"></div>
+					<div id="chip2" class="chip"></div>
+					<div id="chip3" class="chip"></div>
+					<div id="chip4" class="chip"></div>
+				</div>
+			
+			
+			
+				<div id="input">
+					<div id="commander">
+						<label for="commanders">Commander:</label>
+						<select id="commanders"></select>
+					</div>
+					<div id="stars">
+						<div class="star selected" id="stars1"></div>
+						<div class="star" id="stars2"></div>
+						<div class="star" id="stars3"></div>
+						<div class="star" id="stars4"></div>
+						<div class="star" id="stars5"></div>
+						<div class="star" id="stars6"></div>
+						<div class="star" id="stars7"></div>
+						<div class="star" id="stars8"></div>
+						<div class="star" id="stars9"></div>
+					</div>
+					<div id="growth">
+						<div class="half">
+							<div class="stat">
+								<label for="accuracy">Accuracy:</label>
+								<input id="accuracy" value="0"/>
+							</div>
+							<div class="stat">
+								<label for="dodge">Dodge:</label>
+								<input id="dodge" value="0"/>
+							</div>
+						</div>
+						<div class="half">
+							<div class="stat">
+								<label for="speed">Speed:</label>
+								<input id="speed" value="0"/>
+							</div>
+							<div class="stat">
+								<label for="electron">Electron:</label>
+								<input id="electron" value="0"/>
+							</div>
+						</div>
+					</div>
+					<div id="level">
+						Level: <input type="range" min="1" max="50" value="50"/> <span id="levelText">50</span>
+					</div>
+					<div id="variance">
+						Variance: <input type="range" min="-30" max="30" value="0"/> <span id="varianceText">0</span>
+					</div>
+					<div id="gems">
+						<div class="column">
+							<div class="gem red" id="red1"></div>
+							<div class="gem red" id="red2"></div>
+							<div class="gem red" id="red3"></div>
+						</div>
+						<div class="column">
+							<div class="gem blue" id="blue1"></div>
+							<div class="gem blue" id="blue2"></div>
+							<div class="gem blue" id="blue3"></div>
+						</div>
+						<div class="column">
+							<div class="gem green" id="green1"></div>
+							<div class="gem green" id="green2"></div>
+							<div class="gem green" id="green3"></div>
+						</div>
+						<div class="column">
+							<div class="gem diamond" id="diamond1"></div>
+							<div class="gem diamond" id="diamond2"></div>
+							<div class="gem diamond" id="diamond3"></div>
+						</div>
+						<div id="removeGems"><button>Remove All</button></div>
+					</div>
+					<div id="link">
+						<button id="save">Save Commander</button>
+					<!--	<button id="list">List Commanders</button> -->
+						<button id="linker">link Commander</button>
+					</div>
+				</div>
+				<div id="output">
+					<button id="showHD">HD</button>
+					<div id="commanderImage"><img/></div>
+					<div id="commanderQuality">&nbsp;</div>
+					<div id="divineCombo"></div>
+					<div id="skill"><b id="skillName">Skill Name</b>: <span id="skillDescription">Skill Description</span></div>
+					<div id="prof">
+						<div id="prof-ballistic" data-title="Ballistic"><img src="/imgs/layout/effD.png"/></div>
+						<div id="prof-directional" data-title="Directional"><img src="/imgs/layout/effD.png"/></div>
+						<div id="prof-missile" data-title="Missile"><img src="/imgs/layout/effD.png"/></div>
+						<div id="prof-carrier" data-title="Ship-Based"><img src="/imgs/layout/effD.png"/></div>
+						<div id="prof-defend" data-title="Planetary"><img src="/imgs/layout/effD.png"/></div>
+						<div id="prof-frigate" data-title="Frigate"><img src="/imgs/layout/effD.png"/></div>
+						<div id="prof-cruiser" data-title="Cruiser"><img src="/imgs/layout/effD.png"/></div>
+						<div id="prof-battleship" data-title="Battleship"><img src="/imgs/layout/effD.png"/></div>
+					</div>
+					<div id="combined">Combined: <span id="pCombined">0</span></div>
+					<div id="rate" class="hide">Proc Rate: <span id="pProcRate">0</span></div>
+					<div id="result">
+						<div class="stat" title="Accuracy"><div id="pAccuracy">0</div></div>
+						<div class="stat" title="Dodge"><div id="pDodge">0</div></div>
+						<div class="stat" title="Electron"><div id="pElectron">0</div></div>
+						<div class="stat" title="Speed"><div id="pSpeed">0</div></div>
+						<div class="stat" title="Attack Power"><div id="pAttack">0</div></div>
+						<div class="stat" title="Structure"><div id="pStructure">0</div></div>
+						<div class="stat" title="Shield"><div id="pShield">0</div></div>
+						<div class="stat" title="Critical Hit Damage"><div id="pCritDamage">0</div></div>
+						<div class="stat" title="Critical Hit Rate"><div id="pCritRate">0</div></div>
+						<div class="stat" title="Double Attack Rate"><div id="pComboRate">0</div></div>
+						<div class="stat" title="Shield Recovery"><div id="pShieldRecovery">0</div></div>
+						<div class="stat" title="EXP"><div id="pExp">0</div></div>
+					</div>
+					<div id="command"><div id="heading">Command:</div>
+						<div class="type frigate" title="Frigates">0</div>
+						<div class="type cruiser" title="Cruisers">0</div>
+						<div class="type battleship" title="Battleships">0</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="qq"></div>
+		<div id="gemSelector"></div>
+		<div id="powered">Powered by KR&yen;P&dagger;&reg;N&trade;</div>
+	</body>
+</html>

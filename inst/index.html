@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+		<title>Instance Viewer - Galaxy Online 2</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<meta name="keywords" content="Galaxy Online 2 Instance Viewer Pirates Restricted Instances Constellations"/>
+		<meta name="description" content="Instance Viewer - Galaxy Online 2"/>
+		<script type="text/javascript" src="/lib/compat.1.js"></script>
+		<script type="text/javascript" src="/lib/json.1.js"></script>
+		<script type="text/javascript" src="/lib/functions.1.js"></script>
+		<script type="text/javascript" src="/lib/draggable.1.js"></script>
+		<script type="text/javascript" src="/lib/background-size.1.js"></script>
+		<script type="text/javascript" src="/res/defines.37.js"></script>
+		<script type="text/javascript" src="/res/hulls.32.js"></script>
+		<script type="text/javascript" src="/res/parts.27.js"></script>
+		<script type="text/javascript" src="/res/commanders.27.js"></script>
+		<script type="text/javascript" src="/res/fleet-commanders.2.js"></script>
+		<script type="text/javascript" src="/res/items.2.js"></script>
+		<script type="text/javascript" src="/res/builds.1.js"></script>
+		<script type="text/javascript" src="/res/fleets.2.js"></script>
+		<script type="text/javascript" src="/res/instances.2.js"></script>
+		<script type="text/javascript" src="/res/lists.37.js"></script>
+		<script type="text/javascript" src="/inst/application.8.js"></script>
+		<link rel="stylesheet" type="text/css" href="/inst/styles.6.css"/>
+	</head>
+	<body id="loading">
+		<div id="message">
+			<span id="messageText">
+				<script type="text/javascript">document.write('Loading');</script>
+				<noscript>Javascript is required to view this</noscript>
+			</span>
+		</div>
+		<div id="links">
+			<a href="/des/">Designer</a>
+			<a href="/cc/">Commanders</a>
+			<a href="http://go2.forum.igg.com/topic?fcid=91&amp;ctid=186136" target="_blank">Contact Me</a>
+		</div>
+		<div id="mapSelector">
+			<div>
+				<select id="mapList"></select>
+				<button id="mapLoader">Load</button>
+				<img id="mapIcon" src="" style="vertical-align:middle;" alt="Map Icon"/>
+			</div>
+			<div>
+				<button id="mapLinker">Link to this Instance</button>
+			</div>
+		</div>
+		<div id="inspector">
+			<button id="closeInspector">Close</button>
+			<div id="commander">
+				<div id="commanderStars"></div>
+				<img id="commanderIcon" src="/imgs/commanders-small/SmallCommand0.jpg"/>
+			</div>
+			<div id="formation"></div>
+			<table id="structureDetails">
+				<tr>
+					<th colspan="2">Structure Details</th>
+				</tr>
+				<tr>
+					<td style="width:25%;">Name:</td>
+					<td>
+						<div id="structureName"></div>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:25%;">Level:</td>
+					<td>
+						<div id="structureLevel"></div>
+					</td>
+				</tr>
+			</table>
+			<table id="fleetDetails">
+				<tr>
+					<th colspan="2">Fleet Details</th>
+				</tr>
+				<tr>
+					<td style="width:25%;">Name:</td>
+					<td>
+						<div id="fleetName"></div>
+						<select id="fleetSelector"></select>
+					</td>
+				</tr>
+				<tr>
+					<td>Target:</td>
+					<td>
+						<div id="target"></div>
+						<select id="targetSelector">
+							<option value="2">Closest</option>
+							<option value="7">Min Attack</option>
+							<option value="8">Max Attack</option>
+							<option value="9">Min Durability</option>
+							<option value="10">Max Durability</option>
+						</select>
+						<input type="button" id="turnButton" value="Turn"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Range:</td>
+					<td>
+						<div id="range"></div>
+						<select id="rangeSelector">
+							<option value="1">Min Range</option>
+							<option value="2">Max Range</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Movement:</td>
+					<td id="movement"></td>
+				</tr>
+				<tr>
+					<td>Durability:</td>
+					<td id="durability"></td>
+				</tr>
+				<tr>
+					<td>Attack:</td>
+					<td id="attack"></td>
+				</tr>
+			</table>
+			<table id="stackDetails">
+				<tr>
+					<th colspan="2">Ship Details</th>
+				</tr>
+				<tr>
+					<td style="width:25%;">Name:</td>
+					<td id="shipName"></td>
+				</tr>
+				<tr>
+					<td>Hull:</td>
+					<td id="hullName"></td>
+				</tr>
+				<tr>
+					<td>Shield:</td>
+					<td id="stackShield"></td>
+				</tr>
+				<tr>
+					<td>Structure:</td>
+					<td id="stackStructure"></td>
+				</tr>
+				<tr>
+					<td>Weapons:</td>
+					<td id="weaponParts"></td>
+				</tr>
+				<tr>
+					<td>Defense:</td>
+					<td id="defenseParts"></td>
+				</tr>
+			</table>
+			<table id="commanderDetails">
+				<tr>
+					<th colspan="2">Commander Details</th>
+				</tr>
+				<tr>
+					<td style="width:25%;">Name:</td>
+					<td id="commanderName"></td>
+				</tr>
+				<tr>
+					<td>Type:</td>
+					<td id="commanderType"></td>
+				</tr>
+				<tr>
+					<td>Stars:</td>
+					<td id="stars"></td>
+				</tr>
+				<tr>
+					<td>Level:</td>
+					<td id="level"></td>
+				</tr>
+				<tr>
+					<td>Skill:</td>
+					<td id="skill"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="map"></div>
+		
+		<div id="rewardList" class="expanded">
+			<div id="rewardListShow">Show Rewards</div>
+			<div id="rewardListClose">Close</div>
+			<ul><ul>
+		</div>
+		<div id="powered">Powered by KR&yen;P&dagger;&reg;N&trade;</div>
+		
+	</body>
+</html>
+     

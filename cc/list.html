@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" type="text/css" href="/cc/static.4.css"/>
+		<link rel="stylesheet" type="text/css" href="/cc/styles.10.css"/></head>
+<body>
+
+<div id="test"></div><div>Listy the things!</div>
+<!-- <script type="text/javascript" src="/cc/application.18.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<table border="1">
+  <tbody>
+    <tr>
+      <th> Number </th>
+      <th> Name </th>
+    </tr>
+    <tr>
+      <td class="number"></td>
+      <td class="name"></td>
+    </tr>
+  </tbody>
+</table>
+<script>
+var savedCommanders = JSON.parse(localStorage.getItem('savedCommanders'));
+//var savedCommanders = localStorage.getItem('savedCommanders.1');
+console.log(savedCommanders);
+
+//savedCommanders = (savedCommanders) ? JSON.parse(savedCommanders) : [];
+    $.each(savedCommanders, function(key, value){
+      $('tbody').append(`<tr>
+      <td class="number">${id}</td>
+      <td class="name">${commanderId}</td>
+    </tr>`)
+})
+//Output all as this is too stupid to find specific
+for (i = 0; i < localStorage.length; i++) {
+  x = localStorage.key(i);
+  document.getElementById("output").innerHTML += x;
+}
+
+</script>
+<div id="output"></div>
+</body>
+</html>
