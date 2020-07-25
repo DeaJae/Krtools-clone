@@ -4960,7 +4960,8 @@ maps[INSTANCE_ARIES_04] = {
 		ITEM_WHEELER_ENGINE_CHEST,
 		ITEM_TENSOR_ARMOR_CHEST,
 		ITEM_MIND_CHEST,
-		ITEM_SPECTRE_CHEST
+		ITEM_SPECTRE_CHEST,
+		ITEM_GEN_IV_WEAPON_CHEST
 	],
 	objects: [
 		{ type: OBJECT_PLAYER, x: 20, y: 12, order: 1 },
@@ -5223,24 +5224,3 @@ maps[INSTANCE_CANCER_04] = {
 		{ type: OBJECT_ENEMY, fleet: FLEET_STAR_11, x: 11, y: 19 }
 	]
 };
-/*
-     FILE ARCHIVED ON 18:03:45 Nov 16, 2018 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 15:03:37 Jul 22, 2019.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  LoadShardBlock: 57.064 (3)
-  esindex: 0.014
-  captures_list: 77.659
-  CDXLines.iter: 14.183 (3)
-  PetaboxLoader3.datanode: 98.315 (5)
-  exclusion.robots: 0.168
-  exclusion.robots.policy: 0.155
-  RedisCDXSource: 2.606
-  PetaboxLoader3.resolve: 150.237 (2)
-  load_resource: 241.866
-*/

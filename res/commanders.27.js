@@ -3267,24 +3267,3 @@ commanders[COMMANDER_MURPHY_LAWSON] = {
 	procC: 0.00182171,
 	procD: -3.8486016711443404 * Math.pow(10, -8)
 };
-/*
-     FILE ARCHIVED ON 16:15:30 Nov 16, 2018 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 15:03:37 Jul 22, 2019.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  LoadShardBlock: 71.416 (3)
-  esindex: 0.011
-  captures_list: 88.714
-  CDXLines.iter: 11.76 (3)
-  PetaboxLoader3.datanode: 224.457 (5)
-  exclusion.robots: 0.144
-  exclusion.robots.policy: 0.133
-  RedisCDXSource: 1.85
-  PetaboxLoader3.resolve: 377.617 (2)
-  load_resource: 639.105
-*/

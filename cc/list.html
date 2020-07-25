@@ -1,46 +1,56 @@
-<!DOCTYPE html>
-<html>
-    <head><link rel="stylesheet" type="text/css" href="/cc/static.4.css"/>
-		<link rel="stylesheet" type="text/css" href="/cc/styles.10.css"/></head>
+<link rel="stylesheet" type="text/css" href="/cc/static.4.css"/>
+		<link rel="stylesheet" type="text/css" href="/cc/styles.10.css"/>
 <body>
+<script type="text/javascript" src="/res/defines.37.js"></script>
+		<script type="text/javascript" src="/res/gems.2.js"></script>
+		<script type="text/javascript" src="/res/commanders.27.js"></script>
+		<script type="text/javascript" src="/res/chip.1.js"></script>
+		<script type="text/javascript" src="/cc/other.1.js"></script>
+	<!--	<script type="text/javascript" src="/cc/application.18.js"></script>-->
 
-<div id="test"></div><div>Listy the things!</div>
-<!-- <script type="text/javascript" src="/cc/application.18.js"></script> -->
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+	<div id="savedDesigns" class="savedDesigns"><span id="savedDesigns"></span></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <table border="1">
   <tbody>
     <tr>
       <th> Number </th>
-      <th> Name </th>
-    </tr>
-    <tr>
-      <td class="number"></td>
-      <td class="name"></td>
+	  <th> Commander name </th>
+	  <th> link </th>
     </tr>
   </tbody>
 </table>
 <script>
-var savedCommanders = JSON.parse(localStorage.getItem('savedCommanders'));
-//var savedCommanders = localStorage.getItem('savedCommanders.1');
-console.log(savedCommanders);
-
-//savedCommanders = (savedCommanders) ? JSON.parse(savedCommanders) : [];
-    $.each(savedCommanders, function(key, value){
-      $('tbody').append(`<tr>
-      <td class="number">${id}</td>
-      <td class="name">${commanderId}</td>
-    </tr>`)
+var commanders = localStorage.getItem("cc");
+commander     = JSON.parse(commanders);
+// Retrieve
+//document.getElementById("savedDesigns").innerHTML = localStorage.getItem("");
+//localStorage.getItem(dataObj);
+//var jsonData = JSON.parse(localStorage.getItem("des"));
+$.each(commander.savedCommanders, function(key, value){
+  $('tbody').append(`<tr>
+  <td class="Number">${value.id}</td>
+  <td class="Commander_name">${value.commanderId}</td>
+  <td class="link">${value.link}</td>
+</tr>`);
 })
-//Output all as this is too stupid to find specific
-for (i = 0; i < localStorage.length; i++) {
-  x = localStorage.key(i);
-  document.getElementById("output").innerHTML += x;
-}
-
+function commanderTextLink(id){
+		var
+			i = commanders.length,
+			o = document.createElement('span')
+		;
+		while (i--){
+			if (commanders[i].id === id){
+				o.appendChild(document.createTextNode(commanders[i].name));
+				o.className = 'type' + commanders[i].type;
+				o.addEventListener('click', function(){
+					document.querySelector('#cc' + id).selected = true;
+					changeCommander();
+				}, false);
+				break;
+			}
+		}
+		return o;
+	}
 </script>
-<div id="output"></div>
+<span class"type"></span>
 </body>
-</html>

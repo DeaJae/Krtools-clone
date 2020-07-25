@@ -1666,7 +1666,7 @@
 	// init the design buttons
 	function initSaver(){
 		querySelector('#saveDesign').addEventListener('click', saveDesign, false);
-	//	querySelector('#showDesigns').addEventListener('click', showDesignList, false);
+		querySelector('#showDesigns').addEventListener('click', showDesignList, false);
 		querySelector('#closeList').addEventListener('click', hideDesignList, false);
 	}
 	
@@ -2338,7 +2338,7 @@
 		initModuleInspector();
 		initDeselectedModules();
 		initSaver();
-		initLinker();
+		//initLinker();
 		initRanges();
 		initQuick();
 		initFlagshipSelector();

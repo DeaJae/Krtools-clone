@@ -499,6 +499,8 @@
 	function saveCommander(){
 		var
 			commanderId = Math.floor(document.querySelector('#commanders option:checked').id.replace(/[^0-9]/g, '')),
+			//url and name
+			savelink = getLink(),
 			accuracy = n('#accuracy'), 
 			dodge = n('#dodge'), 
 			speed = n('#speed'), 
@@ -514,6 +516,9 @@
 		;
 		commander.id = newCommanderId();
 		commander.commanderId = commanderId;
+		//commander.name and commander.url test
+		//commander.name = ;
+		commander.link = savelink;
 		commander.accuracy = accuracy;
 		commander.dodge = dodge;
 		commander.speed = speed;
@@ -653,7 +658,7 @@
 		
 		
 		document.querySelector('#link #save').addEventListener('click', saveCommander, false);
-	//	document.querySelector('#link #list').addEventListener('click', listCommanders, false);
+		document.querySelector('#link #list').addEventListener('click', listCommanders, false);
 		document.querySelector('#closeList').addEventListener('click', hideCommanders, false);
 		document.querySelector('#link #linker').addEventListener('click', showLink, false);
 		

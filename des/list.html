@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/des/styles.15.css"/>
+    <script type="text/javascript" src="/res/defines.37.js"></script>
+    <script type="text/javascript" src="/res/chip.1.js"></script>
+    <script type="text/javascript" src="/res/hulls.32.js"></script>
+    <script type="text/javascript" src="/res/parts.27.js"></script>
+    <script type="text/javascript" src="/res/lists.37.js"></script>
+    <script type="text/javascript" src="/lib/html5slider.1.js"></script>
+ <!--   <script type="text/javascript" src="/des/application.40.js"></script>--></head>
+<html>
+    <body>
+<div id="savedDesigns" class="savedDesigns"><span id="savedDesigns"></span></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<table border="1">
+  <tbody>
+    <tr>
+      <th> Number </th>
+      <th> Build name </th>
+    </tr>
+  </tbody>
+</table>
+<script>
+var designs = localStorage.getItem("des");
+design     = JSON.parse(designs);
+// Retrieve
+//document.getElementById("savedDesigns").innerHTML = localStorage.getItem("");
+//localStorage.getItem(dataObj);
+//var jsonData = JSON.parse(localStorage.getItem("des"));
+$.each(design.savedDesigns, function(key, value){
+  $('tbody').append(`<tr>
+  <td class="Number">${value.id}</td>
+  <td class="Build_name">${value.name}</td>
+</tr>`);
+})
+//console.dir(savedDesigns);
+</script>
+</body></html>
