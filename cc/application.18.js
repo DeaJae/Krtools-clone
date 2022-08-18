@@ -500,6 +500,7 @@
 		var
 			commanderId = Math.floor(document.querySelector('#commanders option:checked').id.replace(/[^0-9]/g, '')),
 			//url and name
+		        savename = document.querySelector('#commanders option:checked').text,
 			savelink = getLink(),
 			accuracy = n('#accuracy'), 
 			dodge = n('#dodge'), 
@@ -517,7 +518,7 @@
 		commander.id = newCommanderId();
 		commander.commanderId = commanderId;
 		//commander.name and commander.url test
-		//commander.name = ;
+		commander.commname = savename;
 		commander.link = savelink;
 		commander.accuracy = accuracy;
 		commander.dodge = dodge;
