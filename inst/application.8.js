@@ -413,7 +413,7 @@
 			break;
 			case 2:
 				if (instantInspect === true){
-					inspector.open(true);
+					inspector.open(false);  //true if editor thing gets done.
 					inspector.setMode('player');
 					inspector.setPanel('fleet');
 					return;
