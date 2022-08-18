@@ -20,37 +20,17 @@
   </tbody>
 </table>
 <script>
+
 var commanders = localStorage.getItem("cc");
 commander     = JSON.parse(commanders);
 // Retrieve
-//document.getElementById("savedDesigns").innerHTML = localStorage.getItem("");
-//localStorage.getItem(dataObj);
-//var jsonData = JSON.parse(localStorage.getItem("des"));
 $.each(commander.savedCommanders, function(key, value){
   $('tbody').append(`<tr>
-  <td class="Number">${value.id}</td>
-  <td class="Commander_name">${value.commanderId}</td>
-  <td class="link">${value.link}</td>
+  <td class="cc">${value.id}</td>
+  <td class="Commander_name">${value.commname}</td>
+  <td class="link ${value.id}" id="links"> <a href="${value.link}" target="_top">Load</a> </td>
 </tr>`);
 })
-function commanderTextLink(id){
-		var
-			i = commanders.length,
-			o = document.createElement('span')
-		;
-		while (i--){
-			if (commanders[i].id === id){
-				o.appendChild(document.createTextNode(commanders[i].name));
-				o.className = 'type' + commanders[i].type;
-				o.addEventListener('click', function(){
-					document.querySelector('#cc' + id).selected = true;
-					changeCommander();
-				}, false);
-				break;
-			}
-		}
-		return o;
-	}
+
 </script>
-<span class"type"></span>
 </body>
