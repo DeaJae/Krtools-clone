@@ -10414,6 +10414,7 @@ hulls[HULL_TERRA_SCORPIREX_1] = {
 		"Increases Penetration Damage by 10%"
 	],
 	bodyType: 3,
+	comment2: "Requires Shadow Trojan X",
 	comment3: "Tesla Merging or Bought with Champion Points",
 	flagship: 11,
 	groupID: 83,
@@ -10529,6 +10530,7 @@ hulls[HULL_ABYSSAL_SCYLLA_1] = {
 		"Restores Shields by 30% if the fleet moved"
 	],
 	bodyType: 3,
+	comment2: "Requires GForce's Dreadnaught X",
 	comment3: "Tesla Merging or Bought with Champion Points",
 	flagship: 12,
 	groupID: 84,
@@ -10644,6 +10646,7 @@ hulls[HULL_CAERULEX_LADON_1] = {
 		"Retaliates 10% of DMG taken when hit"
 	],
 	bodyType: 3,
+	comment2: "Requires Conquistador X",
 	comment3: "Tesla Merging or Bought with Champion Points",
 	flagship: 13,
 	groupID: 85,
