@@ -10,3 +10,9 @@ http://krtools.deajae.co.uk
 - Max Attack Calculator doesn't work right, it won't save your options.
 - Load/Save commanders/desgins are disabled due to issues with how localstorage works (or doesn't in this case), use 'link/share' and put url in a txt file. should load old builds if you replace url.
 - not mobile friendly due to small images and numbers clumped together, not a clue how to solve this yet.
+
+# Current Running Game
+[Official Website](https://supergo2.com)
+[Play Beta](https://github.com/SuperGO2/supergo2-issues)
+[Discord](https://discord.gg/ApPQErfvJw)
+[Launcher Releases](https://github.com/SuperGO2/supergo2-issues/releases)
