@@ -12,7 +12,7 @@ http://krtools.deajae.co.uk
 - not mobile friendly due to small images and numbers clumped together, not a clue how to solve this yet.
 
 # Current Running Game
-[Official Website](https://supergo2.com)
-[Play Beta](https://github.com/SuperGO2/supergo2-issues)
-[Discord](https://discord.gg/ApPQErfvJw)
+[Official Website](https://supergo2.com) <br>
+[Play Beta](https://github.com/SuperGO2/supergo2-issues) <br>
+[Discord](https://discord.gg/ApPQErfvJw) <br>
 [Launcher Releases](https://github.com/SuperGO2/supergo2-issues/releases)
